@@ -1,0 +1,54 @@
+﻿@model Argus.Models.Procedimento           
+           
+<h2>Impressão</h2>
+
+<script src="../../Scripts/jquery.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    function substituiProc(valor) {
+    var str = valor;
+    str = str.replace("[Nome do Animal]", '@(ViewBag.NomeAnimal)');
+    str = str.replace("[Data de nascimento Animal]", '@(ViewBag.DataNascimento)');
+    str = str.replace("[Nome do Cliente]", '@(ViewBag.NomeCliente)');
+    str = str.replace("[Nome do Veterinário]", '@(ViewBag.NomeVeterinario)');
+    str = str.replace("[CRMV do Veterinário]", '@(ViewBag.CRMV)');
+    str = str.replace("[Endereço do Cliente]", '@(ViewBag.EnderecoCliente)');
+    str = str.replace("[Data Atual]", '@(ViewBag.DataHora)');
+    $("#DESCRICAO").val(str);
+}
+
+function validarPesquisa() {
+    if ('@(ViewBag.CodigoAnimal)' == "") {
+        alert('Por favor selecionar o animal e preencher o procedimento antes de efetuar a impressão');
+        return false;
+    }else 
+        return true;
+}
+</script>
+
+@using (Html.BeginForm("Imprimir", "Procedimento"))
+{
+    @Html.TextBoxFor(model => model.CODIGO, new { Type = "hidden" }) 
+    @Html.DisplayText("Informe o nome do animal:")
+    @Html.DropDownList("codigoanimal", ViewBag.ListaAnimal as SelectList, new { @style = "width: 355px;" })
+    <input type="submit" value="Preencher Procedimento"/>
+    <br />
+    <br />
+}
+
+<body onload = "substituiProc(DESCRICAO.value)" >
+@using (Html.BeginForm("ImprimirProc", "Procedimento"))
+{           
+    @Html.TextBoxFor(model => model.CODIGO, new { Type = "hidden" }) 
+    @Html.TextBox("codigoanimal", (string)ViewBag.CodigoAnimal, new { Type = "hidden" })
+    <table>
+        <tr><td align="center">@Html.DisplayFor(model => model.NOME)<br /><br /></td></tr>
+        <tr><td>@Html.TextAreaFor(model => model.DESCRICAO, new { Name = "DESCRICAO", cols = "60%", rows = "15%" })</td></tr>
+    </table>
+    <input type="submit" id="meu" value="Imprimir" onclick = "return validarPesquisa();"/>
+}
+</body> 
+<div>
+    <br /><br />
+    @Html.ActionLink("Voltar a Listagem de Procedimentos", "Listar")
+</div>

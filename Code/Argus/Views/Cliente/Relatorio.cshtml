@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Argus.Models.Cliente>
+
+@{
+    WebGrid grid = new WebGrid(source: Model, selectionFieldName: "SelectedRow", rowsPerPage: 20, ajaxUpdateContainerId: "grid");
+}
+<center>
+<h2>Relatório de Clientes</h2>
+
+
+<br/>
+
+<div id="grid">
+    @grid.GetHtml(
+        tableStyle: "table",
+        alternatingRowStyle: "alternate",
+        headerStyle: "header",
+        footerStyle: "footer",
+        mode: WebGridPagerModes.FirstLast | WebGridPagerModes.NextPrevious,
+        firstText: "Primeiro",
+        previousText: "Anterior",
+        nextText: "Próximo",
+        lastText: "Último",
+        columns: grid.Columns(
+            grid.Column("CODIGO", header: "Código", format: @<text>@item.CODIGO</text>),
+            grid.Column("CODIGO_PESSOA", header: "Pessoa", format: @<text>@item.Pessoa.NOME</text>),
+           // grid.Column("CODIGO_TEMPERAMENTO", header: "Temperamento", format: @<text>@item.Temperamento.NOME</text>),
+            grid.Column("NFILHOS", header: "NFilhos", format: @<text>@item.NFILHOS</text>),
+            grid.Column("NAnimais", header: "NAnimais", format: @<text>@item.NANIMAIS</text>),
+            grid.Column("Editar", header: "Editar", format: @<text>@Html.ActionLink("Editar", "Editar", new { codigo = item.CODIGO })</text>, canSort: false),
+            grid.Column("Eliminar", header: "Eliminar", format: @<text>@Html.ActionLink("Eliminar", "Eliminar", new { codigo = item.CODIGO })</text>, canSort: false)    
+        )
+    )
+
+    <br /><br />
+    <form>
+    <input type="button" name="imprimir" value="Imprimir" onclick="window.print();">
+    </form>
+</div>

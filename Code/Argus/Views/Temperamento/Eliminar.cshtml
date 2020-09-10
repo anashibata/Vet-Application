@@ -1,0 +1,26 @@
+﻿@model Argus.Models.Temperamento
+
+<h2>Eliminação</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm())
+{    
+        <table>
+        
+        <tr>
+        <td>@Html.LabelFor(model => model.NOME)</td>
+        <td>@Html.EditorFor(model => model.NOME) @Html.ValidationMessageFor(model => model.NOME)</td>
+        </tr>
+         
+        </table>
+    
+        <p> <input type="submit" value="Eliminar" /> </p>
+        @Html.Label("Aviso:")@ViewBag.mensagem
+        <br />   <br /> <br />     
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Listar")
+</div>

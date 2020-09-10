@@ -1,0 +1,21 @@
+﻿@model Argus.Models.Procedimento
+
+<h2>Eliminação</h2>
+
+@using (Html.BeginForm())
+{    
+        <table>
+        
+        <tr>
+        <td>@Html.LabelFor(model => model.NOME)</td>
+        <td>@Html.EditorFor(model => model.NOME) @Html.ValidationMessageFor(model => model.NOME)</td>
+        </tr>
+         
+        </table>
+    
+        <p> <input type="submit" value="Eliminar" /> </p>
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Listar")
+</div>

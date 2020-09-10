@@ -1,0 +1,25 @@
+﻿@model Argus.Models.Raca
+
+<h2>Eliminação</h2>
+
+
+@using (Html.BeginForm())
+{    
+        <table>
+        
+        <tr>
+        <td>@Html.LabelFor(model => model.NOME)</td>
+        <td>@Html.TextBoxFor(model => model.NOME, new { Readonly = "readonly" })</td>
+        </tr>
+         
+        </table>
+    
+        <p> <input type="submit" value="Eliminar" /> </p>
+    
+        @Html.Label("Aviso:")@ViewBag.mensagem
+        <br />   <br /> <br /> 
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Listar")
+</div>

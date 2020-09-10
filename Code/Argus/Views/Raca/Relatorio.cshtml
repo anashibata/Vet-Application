@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Argus.Models.Raca>
+
+@{
+    WebGrid grid = new WebGrid(source: Model, selectionFieldName: "SelectedRow", rowsPerPage: 20, ajaxUpdateContainerId: "grid");
+}
+<center>
+<h2>Relatório de Raças</h2>
+
+
+<div id="grid">
+    @grid.GetHtml(
+        tableStyle: "table",
+        alternatingRowStyle: "alternate",
+        headerStyle: "header",
+        footerStyle: "footer",
+        mode: WebGridPagerModes.FirstLast | WebGridPagerModes.NextPrevious,
+        firstText: "Primeiro",
+        previousText: "Anterior",
+        nextText: "Próximo",
+        lastText: "Último",
+        columns: grid.Columns(
+            grid.Column("CODIGO", header: "Código", format: @<text>@item.CODIGO</text>),
+            grid.Column("NOME", header: "Nome", format: @<text>@item.NOME</text>)
+               
+        )
+    )
+    <br /><br />
+    <form>
+    <input type="button" name="imprimir" value="Imprimir" onclick="window.print();">
+    </form>
+    </center>
+</div>

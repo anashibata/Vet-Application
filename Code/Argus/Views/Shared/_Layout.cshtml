@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>    
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+
+
+
+<br />
+@if(Request.IsAuthenticated) {
+                            <text><font color="white" size="2"> Bem Vindo <b>@Context.User.Identity.Name</b>!
+                            [ @Html.ActionLink("Log Off", "LogOff", "Account") ]</font></text>
+    
+    <text><font color="white" size="2"> Alterar Senha 
+                            [ @Html.ActionLink("Clique aqui", "ChangePassword", "Account") ]</font></text>
+}
+else
+{
+                            @:[ @Html.ActionLink("Log On", "LogOn", "Account") ]
+                        }
+
+
+
+@{if (Context.User.Identity.Name=="administrador")
+{
+      
+       <text><font color="white" size="2"> Cadastrar Novo Usuário
+                            [ @Html.ActionLink("Cadastrar", "Register", "Account") ]</font></text>
+                            
+    
+
+   
+}
+}
+
+<br />                      
+<br />
+</head>
+
+<body>
+    <div class="page">
+       <div id="header">   
+       <center>                     
+           <a href="../Home/Cadastro"><img src=../../Content/img/cadastros.png width=90 height=100 title="Cadastros Auxiliares" border=0></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <a href="../Pessoa/Listar"><img src=../../Content/img/pessoa.png width=90 height=100 title="Cadastrar Pessoa" border=0></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <a href="../Cliente/Listar"><img src=../../Content/img/cliente.png width=90 height=100 title="Clientes" border=0></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <a href="../Veterinario/Listar"><img src=../../Content/img/veterinario.png width=90 height=100 title="Cadastro de Veterinario" border=0></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	       <a href="../Animal/Listar">  <img src=../../Content/img/cao.png width=90 height=100 title="Cadastro Animais" border=0></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           
+           <a href="../Consulta/Listar"><img src=../../Content/img/consulta.png width=90 height=100 title="Consulta" border=0></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <a href="../Procedimento/Listar"><img src=../../Content/img/procedimentos.png width=90 height=100 title="Procedimentos" border=0></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <a href="../Email/Enviar"><img src=../../Content/img/email.png width=90 height=100 title="E-mail" border=0></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <a href="../Home/Relatorio"><img src=../../Content/img/relatorios.png width=90 height=100 title="Relatórios" border=0></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  
+        </center>           
+        </div>
+        <br />
+        <div id="main">
+            @RenderBody()            
+        </div>
+         <div id="footer">
+            <center> <img src=../../Content/img/argus.png width=250 height=40> </p></center>
+        </div>
+    </div>
+    
+     
+</body>
+</html>

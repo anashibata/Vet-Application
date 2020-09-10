@@ -1,0 +1,50 @@
+﻿@model Argus.Models.Cliente
+
+<h2>Inclusão</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script src="../../Scripts/jquery-1.6.min.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery.maskedinput-1.3.min.js" type="text/javascript"></script>
+<script src="../../Scripts/FuncoesGenericas.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    function SomenteNumero(num) {
+        if (num < 48 || num > 57)
+            return false;
+    }
+</script>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+        <table>
+        
+        <tr>
+        <td>@Html.LabelFor(model => model.CODIGO_PESSOA, "Pessoa")</td>          
+        <td>@Html.DropDownListFor(model => model.CODIGO_PESSOA, ViewBag.ListarPessoa as SelectList, new { Class = "listarequerida" }) @Html.ValidationMessageFor(model => model.CODIGO_PESSOA)</td>
+        </tr>
+        
+        <tr>
+        <td>@Html.LabelFor(model => model.CODIGO_TEMPERAMENTO, "Temperamento")</td>          
+        <td>@Html.DropDownListFor(model => model.CODIGO_TEMPERAMENTO, ViewBag.ListarTemperamento as SelectList, new { Class = "lista" }) @Html.ValidationMessageFor(model => model.CODIGO_TEMPERAMENTO)</td>
+        </tr>
+        
+        <tr>
+        <td>@Html.LabelFor(model => model.NFILHOS)</td>
+        <td>@Html.TextBoxFor(model => model.NFILHOS, new { maxlength = 3, id = "de", Class = "textopequeno", OnKeyPress = "return SomenteNumero(event.keyCode)" }) @Html.ValidationMessageFor(model => model.NFILHOS)</td>
+        </tr>   
+        
+        <tr>
+        <td>@Html.LabelFor(model => model.NANIMAIS)</td>
+        <td>@Html.TextBoxFor(model => model.NANIMAIS, new { maxlength = 3, id = "de", Class = "textopequeno", OnKeyPress = "return SomenteNumero(event.keyCode)" }) @Html.ValidationMessageFor(model => model.NANIMAIS)</td>
+        </tr>   
+
+        </table>
+        <p><input type="submit" value="Gravar" /></p>     
+}
+
+
+ 
+
+

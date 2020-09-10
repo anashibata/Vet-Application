@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1DF89439-88C2-4866-A724-330141929C5F}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Argus</RootNamespace>
+    <AssemblyName>Argus</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\..\..\..\Downloads\MVC.Extensions.Solution\MVC.Extensions.Solution\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages" />
+    <Reference Include="System.Web.Helpers" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\abas.css" />
+    <Content Include="Content\img\argus.png" />
+    <Content Include="Content\img\autorizacao.png" />
+    <Content Include="Content\img\baixa.png" />
+    <Content Include="Content\img\cadastros.png" />
+    <Content Include="Content\img\cao.png" />
+    <Content Include="Content\img\checkup.png" />
+    <Content Include="Content\img\cidade.png" />
+    <Content Include="Content\img\cliente.png" />
+    <Content Include="Content\img\consulta.png" />
+    <Content Include="Content\img\consulta2.png" />
+    <Content Include="Content\img\diag.png" />
+    <Content Include="Content\img\diagnostico.png" />
+    <Content Include="Content\img\email.png" />
+    <Content Include="Content\img\email2.png" />
+    <Content Include="Content\img\estado.png" />
+    <Content Include="Content\img\exame.png" />
+    <Content Include="Content\img\exameref.png" />
+    <Content Include="Content\img\home.png" />
+    <Content Include="Content\img\imagens.png" />
+    <Content Include="Content\img\Letras em azul claro\argus.png" />
+    <Content Include="Content\img\Letras em azul claro\autorizacao.png" />
+    <Content Include="Content\img\Letras em azul claro\baixa.png" />
+    <Content Include="Content\img\Letras em azul claro\cadastros.png" />
+    <Content Include="Content\img\Letras em azul claro\cao.png" />
+    <Content Include="Content\img\Letras em azul claro\checkup.png" />
+    <Content Include="Content\img\Letras em azul claro\cidade.png" />
+    <Content Include="Content\img\Letras em azul claro\cliente.png" />
+    <Content Include="Content\img\Letras em azul claro\consulta.png" />
+    <Content Include="Content\img\Letras em azul claro\consulta2.png" />
+    <Content Include="Content\img\Letras em azul claro\diag.png" />
+    <Content Include="Content\img\Letras em azul claro\diagnostico.png" />
+    <Content Include="Content\img\Letras em azul claro\email.png" />
+    <Content Include="Content\img\Letras em azul claro\estado.png" />
+    <Content Include="Content\img\Letras em azul claro\exame.png" />
+    <Content Include="Content\img\Letras em azul claro\exameref.png" />
+    <Content Include="Content\img\Letras em azul claro\home.png" />
+    <Content Include="Content\img\Letras em azul claro\imagens.png" />
+    <Content Include="Content\img\Letras em azul claro\login.jpg" />
+    <Content Include="Content\img\Letras em azul claro\login2.jpg" />
+    <Content Include="Content\img\Letras em azul claro\medico.png" />
+    <Content Include="Content\img\Letras em azul claro\medprev.png" />
+    <Content Include="Content\img\Letras em azul claro\pessoa.png" />
+    <Content Include="Content\img\Letras em azul claro\procedimentos.png" />
+    <Content Include="Content\img\Letras em azul claro\raca.png" />
+    <Content Include="Content\img\Letras em azul claro\relatorio.png" />
+    <Content Include="Content\img\Letras em azul claro\relatorio2.png" />
+    <Content Include="Content\img\Letras em azul claro\relatorios.png" />
+    <Content Include="Content\img\Letras em azul claro\servicos1.png" />
+    <Content Include="Content\img\Letras em azul claro\servicos2.png" />
+    <Content Include="Content\img\Letras em azul claro\temperamento.png" />
+    <Content Include="Content\img\Letras em azul claro\usuario.png" />
+    <Content Include="Content\img\Letras em azul claro\vacina.png" />
+    <Content Include="Content\img\Letras em azul claro\veterinario.png" />
+    <Content Include="Content\img\login.jpg" />
+    <Content Include="Content\img\login2.jpg" />
+    <Content Include="Content\img\medico.png" />
+    <Content Include="Content\img\medprev.png" />
+    <Content Include="Content\img\Original\argus.png" />
+    <Content Include="Content\img\Original\autorizacao.png" />
+    <Content Include="Content\img\Original\baixa.png" />
+    <Content Include="Content\img\Original\cao.png" />
+    <Content Include="Content\img\Original\checkup.png" />
+    <Content Include="Content\img\Original\cidade.png" />
+    <Content Include="Content\img\Original\cliente.png" />
+    <Content Include="Content\img\Original\consulta.png" />
+    <Content Include="Content\img\Original\consulta2.png" />
+    <Content Include="Content\img\Original\diag.png" />
+    <Content Include="Content\img\Original\diagnostico.png" />
+    <Content Include="Content\img\Original\email.png" />
+    <Content Include="Content\img\Original\email2.png" />
+    <Content Include="Content\img\Original\estado.png" />
+    <Content Include="Content\img\Original\exame.png" />
+    <Content Include="Content\img\Original\exameref.png" />
+    <Content Include="Content\img\Original\home.png" />
+    <Content Include="Content\img\Original\imagens.png" />
+    <Content Include="Content\img\Original\login.jpg" />
+    <Content Include="Content\img\Original\login2.jpg" />
+    <Content Include="Content\img\Original\medico.png" />
+    <Content Include="Content\img\Original\medprev.png" />
+    <Content Include="Content\img\Original\pessoa.png" />
+    <Content Include="Content\img\Original\procedimentos.png" />
+    <Content Include="Content\img\Original\raca.png" />
+    <Content Include="Content\img\Original\relatorio.png" />
+    <Content Include="Content\img\Original\relatorio2.png" />
+    <Content Include="Content\img\Original\relatorios.png" />
+    <Content Include="Content\img\Original\servicos1.png" />
+    <Content Include="Content\img\Original\servicos2.png" />
+    <Content Include="Content\img\Original\temperamento.png" />
+    <Content Include="Content\img\Original\usuario.png" />
+    <Content Include="Content\img\Original\vacina.png" />
+    <Content Include="Content\img\Original\veterinario.png" />
+    <Content Include="Content\img\pessoa.png" />
+    <Content Include="Content\img\procedimentos.png" />
+    <Content Include="Content\img\raca.png" />
+    <Content Include="Content\img\relatorio.png" />
+    <Content Include="Content\img\relatorio2.png" />
+    <Content Include="Content\img\relatorios.png" />
+    <Content Include="Content\img\servicos1.png" />
+    <Content Include="Content\img\servicos2.png" />
+    <Content Include="Content\img\temperamento.png" />
+    <Content Include="Content\img\usuario.png" />
+    <Content Include="Content\img\vacina.png" />
+    <Content Include="Content\img\veterinario.png" />
+    <Content Include="Content\webgrid.css" />
+    <Content Include="Models\Util.cs" />
+    <Content Include="App_Code\util.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AnimalController.cs" />
+    <Compile Include="Controllers\AnimalImagemController.cs" />
+    <Compile Include="Controllers\CidadeController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\ConsultaController.cs" />
+    <Compile Include="Controllers\ConsultaExameFisicoController.cs" />
+    <Compile Include="Controllers\ConsultaExameFisicoItemController.cs" />
+    <Compile Include="Controllers\ConsultaProdServController.cs" />
+    <Compile Include="Controllers\DiagnosticoController.cs" />
+    <Compile Include="Controllers\EmailController.cs" />
+    <Compile Include="Controllers\EspecieCheckupController.cs" />
+    <Compile Include="Controllers\EspecieDoencaController.cs" />
+    <Compile Include="Controllers\EstadoController.cs" />
+    <Compile Include="Controllers\ExameFisicoController.cs" />
+    <Compile Include="Controllers\ExameFisicoItemController.cs" />
+    <Compile Include="Controllers\ExameReferenciaController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MedicinaPrevController.cs" />
+    <Compile Include="Controllers\MotivoBaixaController.cs" />
+    <Compile Include="Controllers\PessoaController.cs" />
+    <Compile Include="Controllers\ProcedimentoController.cs" />
+    <Compile Include="Controllers\ProdutoServicoController.cs" />
+    <Compile Include="Controllers\RacaController.cs" />
+    <Compile Include="Controllers\TemperamentoController.cs" />
+    <Compile Include="Controllers\VeterinarioController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Animal.cs" />
+    <Compile Include="Models\AnimalImagem.cs" />
+    <Compile Include="Models\Cidade.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Consulta.cs" />
+    <Compile Include="Models\ConsultaExameFisico.cs" />
+    <Compile Include="Models\ConsultaExameFisicoItem.cs" />
+    <Compile Include="Models\ConsultaProdServ.cs" />
+    <Compile Include="Models\ConsultaStatus.cs" />
+    <Compile Include="Models\Contexto.cs" />
+    <Compile Include="Models\Cor.cs" />
+    <Compile Include="Models\Diagnostico.cs" />
+    <Compile Include="Models\Especie.cs" />
+    <Compile Include="Models\EspecieCheckup.cs" />
+    <Compile Include="Models\EspecieDoenca.cs" />
+    <Compile Include="Models\Estado.cs" />
+    <Compile Include="Models\Exame.cs" />
+    <Compile Include="Models\ExameFisico.cs" />
+    <Compile Include="Models\ExameFisicoItem.cs" />
+    <Compile Include="Models\ExameReferencia.cs" />
+    <Compile Include="Models\MedicinaPrev.cs" />
+    <Compile Include="Models\MotivoBaixa.cs" />
+    <Compile Include="Models\Pelagem.cs" />
+    <Compile Include="Models\Pessoa.cs" />
+    <Compile Include="Models\Porte.cs" />
+    <Compile Include="Models\Procedimento.cs" />
+    <Compile Include="Models\ProdutoServico.cs" />
+    <Compile Include="Models\Raca.cs" />
+    <Compile Include="Models\Temperamento.cs" />
+    <Compile Include="Models\TipoVisita.cs" />
+    <Compile Include="Models\Veterinario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.6.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.maskedinput-1.3.min.js" />
+    <Content Include="Scripts\jquery.tabify.js" />
+    <Content Include="Scripts\jquery.tabify.source.js" />
+    <Content Include="Scripts\ChamadasJSon.js" />
+    <Content Include="Scripts\FuncoesGenericas.js" />
+    <Content Include="Scripts\uploader.swf" />
+    <Content Include="Scripts\util.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\jquery-1.4.4.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery-1.4.4-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Animal\Incluir.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Animal\Editar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Animal\Eliminar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Helpers.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MotivoBaixa\Editar.cshtml" />
+    <Content Include="Views\MotivoBaixa\Eliminar.cshtml" />
+    <Content Include="Views\MotivoBaixa\Incluir.cshtml" />
+    <Content Include="Views\MotivoBaixa\Listar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ExameReferencia\Editar.cshtml" />
+    <Content Include="Views\ExameReferencia\Eliminar.cshtml" />
+    <Content Include="Views\ExameReferencia\Incluir.cshtml" />
+    <Content Include="Views\ExameReferencia\Listar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Diagnostico\Editar.cshtml" />
+    <Content Include="Views\Diagnostico\Eliminar.cshtml" />
+    <Content Include="Views\Diagnostico\Incluir.cshtml" />
+    <Content Include="Views\Diagnostico\Listar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EspecieCheckup\Editar.cshtml" />
+    <Content Include="Views\EspecieCheckup\Eliminar.cshtml" />
+    <Content Include="Views\EspecieCheckup\Incluir.cshtml" />
+    <Content Include="Views\EspecieCheckup\Listar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Veterinario\Listar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Veterinario\Incluir.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Veterinario\Editar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Veterinario\Eliminar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AnimalImagem\Editar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AnimalImagem\Eliminar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\img\Letras em azul claro\Presentation1.pptx" />
+    <None Include="Content\img\Presentation1.pptx" />
+    <None Include="Content\img\Thumbs.db" />
+    <None Include="Scripts\uploader.fla" />
+    <Content Include="Views\AnimalImagem\Listar.cshtml" />
+    <Content Include="Views\AnimalImagem\Incluir.cshtml" />
+    <Content Include="Views\Animal\Listar.cshtml" />
+    <Content Include="Views\Consulta\Incluir.cshtml" />
+    <Content Include="Views\Consulta\Editar.cshtml" />
+    <Content Include="Views\Consulta\Listar.cshtml" />
+    <Content Include="Views\Consulta\Eliminar.cshtml" />
+    <Content Include="Views\ExameFisico\Listar.cshtml" />
+    <Content Include="Views\ExameFisico\Incluir.cshtml" />
+    <Content Include="Views\ExameFisico\Editar.cshtml" />
+    <Content Include="Views\ExameFisico\Eliminar.cshtml" />
+    <Content Include="Views\ExameFisicoItem\Incluir.cshtml" />
+    <Content Include="Views\ExameFisicoItem\Editar.cshtml" />
+    <Content Include="Views\ExameFisicoItem\Eliminar.cshtml" />
+    <Content Include="Views\ExameFisicoItem\Listar.cshtml" />
+    <Content Include="Views\ConsultaProdServ\Editar.cshtml" />
+    <Content Include="Views\ConsultaProdServ\Eliminar.cshtml" />
+    <Content Include="Views\ConsultaProdServ\Incluir.cshtml" />
+    <Content Include="Views\ConsultaProdServ\Listar.cshtml" />
+    <Content Include="Views\ProdutoServico\Editar.cshtml" />
+    <Content Include="Views\ProdutoServico\Eliminar.cshtml" />
+    <Content Include="Views\ProdutoServico\Incluir.cshtml" />
+    <Content Include="Views\ProdutoServico\Listar.cshtml" />
+    <Content Include="Views\ProdutoServico\Relatorio.cshtml" />
+    <Content Include="Views\Cidade\Editar.cshtml" />
+    <Content Include="Views\Cidade\Eliminar.cshtml" />
+    <Content Include="Views\Cidade\Incluir.cshtml" />
+    <Content Include="Views\Cidade\Listar.cshtml" />
+    <Content Include="Views\Estado\Editar.cshtml" />
+    <Content Include="Views\Estado\Eliminar.cshtml" />
+    <Content Include="Views\Estado\Incluir.cshtml" />
+    <Content Include="Views\Estado\Listar.cshtml" />
+    <Content Include="Views\MedicinaPrev\Editar.cshtml" />
+    <Content Include="Views\MedicinaPrev\Eliminar.cshtml" />
+    <Content Include="Views\MedicinaPrev\Incluir.cshtml" />
+    <Content Include="Views\MedicinaPrev\Listar.cshtml" />
+    <Content Include="Views\Pessoa\Editar.cshtml" />
+    <Content Include="Views\Pessoa\Eliminar.cshtml" />
+    <Content Include="Views\Pessoa\Incluir.cshtml" />
+    <Content Include="Views\Pessoa\Listar.cshtml" />
+    <Content Include="Views\Temperamento\Editar.cshtml" />
+    <Content Include="Views\Temperamento\Eliminar.cshtml" />
+    <Content Include="Views\Temperamento\Incluir.cshtml" />
+    <Content Include="Views\Temperamento\Listar.cshtml" />
+    <Content Include="Views\Consulta\ListarConsultasEncerradas.cshtml" />
+    <Content Include="Views\Procedimento\Incluir.cshtml" />
+    <Content Include="Views\Procedimento\Editar.cshtml" />
+    <Content Include="Views\Procedimento\Listar.cshtml" />
+    <Content Include="Views\Procedimento\Eliminar.cshtml" />
+    <Content Include="Views\ConsultaExameFisico\Incluir.cshtml" />
+    <Content Include="Views\ConsultaExameFisico\Editar.cshtml" />
+    <Content Include="Views\ConsultaExameFisico\Eliminar.cshtml" />
+    <Content Include="Views\ConsultaExameFisico\Listar.cshtml" />
+    <Content Include="Views\Raca\Editar.cshtml" />
+    <Content Include="Views\Raca\Eliminar.cshtml" />
+    <Content Include="Views\Raca\Incluir.cshtml" />
+    <Content Include="Views\Raca\Listar.cshtml" />
+    <Content Include="Views\Raca\Relatorio.cshtml" />
+    <Content Include="Views\EspecieDoenca\Editar.cshtml" />
+    <Content Include="Views\EspecieDoenca\Eliminar.cshtml" />
+    <Content Include="Views\EspecieDoenca\Incluir.cshtml" />
+    <Content Include="Views\EspecieDoenca\Listar.cshtml" />
+    <Content Include="Views\EspecieDoenca\Relatorio.cshtml" />
+    <Content Include="Views\Email\Enviar.cshtml" />
+    <Content Include="Views\Cliente\Editar.cshtml" />
+    <Content Include="Views\Cliente\Eliminar.cshtml" />
+    <Content Include="Views\Cliente\Incluir.cshtml" />
+    <Content Include="Views\Cliente\Listar.cshtml" />
+    <Content Include="Views\Cliente\Relatorio.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Relatorio.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\ConsultaExameFisicoItem\Listar.cshtml" />
+    <Content Include="Views\Home\Cadastro.cshtml" />
+    <Content Include="Views\Procedimento\Imprimir.cshtml" />
+    <Content Include="Views\Shared\_LayoutImp.cshtml" />
+    <Content Include="Views\ViewPage1.cshtml" />
+    <Content Include="Views\Procedimento\ImprimirProc.cshtml" />
+    <Content Include="Views\Consulta\Relatorio.cshtml" />
+    <Content Include="Views\ConsultaProdServ\Relatorio.cshtml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57166</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
